@@ -5,14 +5,12 @@
       "src": "app/main.py",
       "use": "@vercel/python",
       "config": {
-        "maxLambdaSize": "15mb"
+        "runtime": "python3.12",
+        "installCommand": "pip install -r requirements.txt"
       }
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app/main.py"
-    }
+    { "src": "/(.*)", "dest": "app/main.py" }
   ]
 }
